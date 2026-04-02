@@ -16,10 +16,18 @@ export const weddingConfig = {
   },
   heroImage: "/portadafinal.jpg",
   info: {
-    date: "Sábado 15 de noviembre de 2025",
-    placeTime: "Salón Los Jazmines — Av. Ejemplo 1234, CABA. Ceremonia 18:00 hs",
+    date: "7 de noviembre 2026",
+    placeTime: "Buenos Aires, Argentina, Lugar y horario: a confirmar",
     dressCode: "Etiqueta rigurosa",
   },
+  /** Link a lista de hoteles, Maps o PDF */
+  hospedajesUrl: "https://maps.google.com",
+  /** Tres imágenes para la galería inferior (archivos en /public) */
+  gallery: [
+    { src: "/1.jpg", alt: "Juan y Kere" },
+    { src: "/2.jpg", alt: "Juan y Kere" },
+    { src: "/3.jpg", alt: "Juan y Kere" },
+  ] as const,
   gifts: {
     bankName: "Banco Ejemplo",
     holder: "Juan Pérez",

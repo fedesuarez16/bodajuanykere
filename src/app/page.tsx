@@ -91,6 +91,9 @@ export default function Home() {
               icon="dress"
             />
           </div>
+          <div className="mt-6 flex justify-center">
+            <HospedajesCard href={c.hospedajesUrl} />
+          </div>
         </div>
       </section>
 
@@ -170,11 +173,74 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Galería */}
+      <section className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+        <div className="text-center">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl font-normal tracking-[0.15em] text-stone-700">
+            Galería
+          </h2>
+          <div
+            className="mx-auto mt-3 h-px w-14 bg-wedding-brown-soft"
+            aria-hidden
+          />
+        </div>
+        <div className="mt-12 grid gap-4 sm:grid-cols-3">
+          {c.gallery.map((item) => (
+            <div
+              key={item.src}
+              className="relative aspect-[4/5] overflow-hidden rounded-sm border border-wedding-brown-light shadow-md ring-1 ring-wedding-brown-soft/25"
+            >
+              <Image
+                src={item.src}
+                alt={item.alt}
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, 33vw"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
       <footer className="border-t border-wedding-brown-light py-10 text-center font-[family-name:var(--font-body)] text-sm text-stone-500">
         {c.coupleNames}{" "}
         <span className="text-wedding-brown-muted">·</span> Con amor
       </footer>
     </div>
+  );
+}
+
+function HospedajesCard({ href }: { href: string }) {
+  return (
+    <article className="flex w-full max-w-md flex-col items-center rounded-sm border border-wedding-brown-soft/60 bg-white p-8 text-center shadow-sm ring-1 ring-wedding-brown-light/35">
+      <span
+        className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-wedding-brown-light text-wedding-brown-muted"
+        aria-hidden
+      >
+        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+          />
+        </svg>
+      </span>
+      <h3 className="font-[family-name:var(--font-display)] text-xl text-stone-700">
+        Hospedajes
+      </h3>
+      <p className="mt-2 font-[family-name:var(--font-body)] text-sm text-stone-500">
+        Opciones cerca del evento
+      </p>
+      <Link
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-6 inline-flex min-h-[44px] w-full max-w-[200px] items-center justify-center rounded-sm border border-wedding-brown-soft bg-wedding-brown px-8 font-[family-name:var(--font-body)] text-sm font-medium text-[#faf8f5] shadow-sm transition hover:bg-wedding-brown-muted"
+      >
+        Ver
+      </Link>
+    </article>
   );
 }
 
