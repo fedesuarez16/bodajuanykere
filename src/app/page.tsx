@@ -97,13 +97,16 @@ export default function Home() {
       {/* Regalos */}
       <section className="mx-auto max-w-3xl px-6 py-20 md:py-28">
         <h2 className="font-[family-name:var(--font-display)] text-center text-3xl tracking-[0.15em] text-stone-700">
-          Regalos
+          Regalos 
         </h2>
         <div
           className="mx-auto mt-3 h-px w-14 bg-wedding-brown-soft"
           aria-hidden
         />
-        <p className="mt-8 text-center font-[family-name:var(--font-body)] text-lg leading-relaxed text-stone-600">
+        <h2 className="font-[family-name:var(--font-display)] text-center text-2xl mt-8 tracking-[0.15em] text-stone-700">
+           Nuestra luna de miel + Hogar
+        </h2>
+        <p className="mt-4 text-center font-[family-name:var(--font-body)] text-lg leading-relaxed text-stone-600">
           Tu presencia es nuestro regalo más importante. Pero si querés acompañarnos
           también con un detalle, estamos juntando fondos para nuestro comienzo
           juntos (preferentemente por transferencia).
