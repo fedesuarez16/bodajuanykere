@@ -15,7 +15,7 @@ const body = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Boda — Invitación",
+  title: "Boda Juan y Kere — Invitación",
   description: "Celebramos nuestro casamiento y queremos compartirlo con vos.",
 };
 
